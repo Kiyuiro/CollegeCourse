@@ -15,6 +15,7 @@ jobs:
       - name:  'Install lib' 🔧
         run: |
           pip install requests
+          cd course
           python main.py
 
       - name: Deploy 🚀
