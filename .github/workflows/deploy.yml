@@ -15,7 +15,6 @@ jobs:
       - name: Install lib 🔧
         run: |
           pip install requests
-          cd course
           python main.py
         env:
           CI: false
