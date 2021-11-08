@@ -2,21 +2,23 @@ name: Reload Course
 on:
   push:
   schedule:
-    -corn: '0 */6 * * *'
+    - cron: 0 */6 * * *
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      -name: 'Set up Python' 🛎️
-       uses: actions/setup-python@v1
-       with:
-         python-version: 3.7
+      - name: Set up Python 🛎️
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
 
-      - name:  'Install lib' 🔧
+      - name: Install lib 🔧
         run: |
           pip install requests
           cd course
           python main.py
+        env:
+          CI: false
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
