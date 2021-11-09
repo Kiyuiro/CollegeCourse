@@ -37,7 +37,7 @@ def mkdir(path):
 
 mkdir("course")
 
-file = open('course/course.html', 'w')
+file = open('course/index.html', 'w')
 file.write(response.text)
 
 
