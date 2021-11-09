@@ -44,7 +44,5 @@ def mkdir(path):
 
 mkdir("course")
 
-file = open('course/index.html', 'w')
+file = open('course/index.html', 'w', encoding="utf-8")
 file.write(word)
-
-
