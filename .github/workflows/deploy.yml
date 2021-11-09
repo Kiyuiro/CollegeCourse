@@ -16,8 +16,6 @@ jobs:
         run: |
           pip install requests
           python main.py
-        env:
-          CI: false
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
