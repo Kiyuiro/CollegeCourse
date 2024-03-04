@@ -343,7 +343,7 @@
 <script type="text/javascript">var timeTable=[["8:30-10:00","8:30-10:00","8:30-10:00"],["10:25-11:55","10:25-11:55","10:25-11:55"],["14:00-15:30","14:00-15:30","14:00-15:30"],["15:50-17:20","15:50-17:20","15:50-17:20"],["18:00-19:30","18:00-19:30","18:00-19:30"],["19:40-21:10","19:40-21:10","19:40-21:10"]];function addTimeShow(){var list=document.querySelectorAll("td");list=Array.from(list);for(var i=list.length-1;i>=0;--i){if(list[i].children.length<1){list.splice(i,1)}}var re=[new RegExp("第一大节"),new RegExp("第二大节"),new RegExp("第三大节"),new RegExp("第四大节"),new RegExp("第五大节"),new RegExp("第六大节")];var idx=0;for(var i=0;i<list.length;++i){var o=list[i];if(idx<6&&re[idx].test(o.innerHTML)){idx++}else{var content=o.children[0].innerHTML;if(new RegExp("敏学楼-D").test(content)||new RegExp("敏学楼-C").test(content)){o.children[0].innerHTML+="<br>"+timeTable[idx-1][0]}else{if(new RegExp("敏学楼-B").test(content)||new RegExp("微机基础室").test(content)||new RegExp("多媒体教室").test(content)){o.children[0].innerHTML+="<br>"+timeTable[idx-1][1]}else{o.children[0].innerHTML+="<br>"+timeTable[idx-1][2]}}}}};addTimeShow();
 
 
-$("#li_showWeek").html("<span class=\"main_text main_color\">第2周</span>/21周");
+$("#li_showWeek").html("<span class=\"main_text main_color\">第3周</span>/21周");
 
 
 
